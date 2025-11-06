@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header>
+        <div class="logo">My Portfolio</div>
+        <div class="menu-toggle" id="menu-toggle">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <nav id="navbar">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#passion">Passion</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- ===== HOME ===== -->
+    <section id="home" class="box">
+        <div class="profile">
+            <img src="saketh pic.jpg" alt="Personal image">
+        </div>
+        <h1>Hi, I'm Saketh Goud 👋</h1>
+        <p>Java Full Stack Developer | Java Learner</p>
+        <button class="btn" onclick="document.querySelector('#about').scrollIntoView({behavior:'smooth'})">
+            Explore My Work
+        </button>
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="box2">
+        <div class="profile">
+            <img src="saketh pic.jpg" alt="Personal image">
+        </div>
+        <div class="intro">
+            <h1>🌟 About Me</h1>
+            <p>Hi, I'm <strong>Saketh Goud</strong>, a <b>Fullstack Java Developer</b> passionate about technology and learning.</p>
+            
+            <div class="tech">
+                <div><img src="https://www.folksit.com/assets/courses/Full_Stack_Python_Online_Training.jpg" alt="Python"> Python Fullstack Learner</div>
+                <div><img src="https://vivasoftltd.com/wp-content/uploads/2024/01/how-to-become-a-full-stack-developer-in-python.jpg" alt="Java"> Java Learner</div>
+                <div><img src="https://www.pngitem.com/pimgs/m/206-2069813_file-css-and-html-css-logo-svg-hd.png" alt="HTML CSS"> HTML & CSS</div>
+            </div>
+            <br>
+            <p>I’m a student who loves exploring how technology can solve everyday challenges.
+               I started my journey with Python and later developed an interest in <b>web development and Java</b>.
+               I enjoy creating clean, responsive websites and optimizing code for performance.
+               When I’m not coding, I like exploring <b>new tech trends</b> and <b>improving my problem-solving skills</b>.
+            </p>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skills" class="box3">
+        <div class="title">
+            <h2>💡 Skills & Expertise</h2>
+            <div class="bar"></div>
+        </div>
+        <div class="cards">
+            <div class="card"><h3>💻 Java</h3><p>Experienced in Java fundamentals, OOP, and backend development.</p></div>
+            <div class="card"><h3>⚙️ Learning</h3><p>Actively learning frameworks and problem-solving approaches.</p></div>
+            <div class="card"><h3>🤖 AI</h3><p>Interested in machine learning concepts.</p></div>
+            <div class="card"><h3>📊 Tableau</h3><p>Basic knowledge of visualization and reporting.</p></div>
+            <div class="card"><h3>🌐 Web Dev</h3><p>Front-end using HTML, CSS, and JS.</p></div>
+        </div>
+    </section>
+
+    <!-- ===== PASSION ===== -->
+    <section id="passion" class="box4">
+        <div class="content">
+            <h2>💡 My Passion</h2>
+            <p>
+                I love <span>breaking down complex concepts</span> into simple, hands-on lessons.
+                Always <span>eager to solve problems</span>, build systems, and create new things.
+                Constantly exploring <span>new technologies</span> and improving skills.
+            </p>
+            <div class="innerbox">
+                <div class="icons">🤖<br> Learn New Things</div>
+                <div class="icons">💻<br> Coding</div>
+                <div class="icons">📚<br> Reading</div>
+                <div class="icons">🔬<br> Research</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECT ===== -->
+    <section id="project" class="box5">
+        <h1>👨‍💻PROJECT</h1>
+        <div class="bar"></div>
+        <br>
+        <ul> 
+            <li class="dot"><a class="A" href="#">(⊙_◎)My Portfolio</a></li>
+        </ul>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <footer id="contact" class="box6">
+        <h1>CONTACT</h1>
+        <div class="bar6"></div>
+        <h2>Saketh Goud </h2>
+        <p> (⊙_◎)Get in Touch👋</p>
+        <br>
+        <p>📞 9347595045</p>
+        <br>
+        <p>📩 konakalasakethgoud@gmail.com</p>
+        <br>
+        <p>LinkedIn:  www.linkedin.com/in/sakethgoud1234</p>
+        <br>
+        <p>GitHub: https://github.com/Saketh-goud12</p>
+    </footer>
+
+    <!-- ===== SCRIPT ===== -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            menuToggle.classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
