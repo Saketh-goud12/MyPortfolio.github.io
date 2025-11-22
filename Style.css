@@ -1,352 +1,346 @@
-        * {
-            margin: 0;
-            padding: 0;
-            scroll-behavior: smooth;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+    font-family:Poppins, sans-serif;
+}
 
-        header {
-            background-color: whitesmoke;
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 70px;
-            width: 100%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 25px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.3);
-            z-index: 1000;
-        }
+/* HEADER  */
+header{
+    background:white;
+    height:70px;
+    width:100%;
+    position:fixed;
+    top:0; left:0;
+    padding:0 25px;
+    display:flex;
+    justify-content:space-around;
+    align-items:center;
+    box-shadow:0 0 10px rgba(0,0,0,0.2);
+    z-index:1000;
+}
 
-        .logo {
-            font-size: 30px;
-            font-weight: bold;
-            color: black;
-        }
+.logo{
+    font-size:38px;
+    font-weight:bold;
+}
+nav{
+    display: flex;
+    align-items: center;
+}
 
-        nav {
-            display: flex;
-            align-items: center;
-        }
+nav a {
+    color: black;
+    font-size: 21px;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+nav a:hover {
+    background: transparent;
+    border: 3px solid black;
+    transition: 0.3s;
+}
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.menu-toggle div {
+    width: 28px;
+    height: 5px;
+    background: black;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+.menu-toggle.open div:nth-child(1) {
+    transform: rotate(45deg) translate(3px, 9px);
+}
+.menu-toggle.open div:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.open div:nth-child(3) {
+    transform: rotate(-45deg) translate(12px, -20px);
+}
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-in-out;
+        padding:0;
+        z-index: 999;
+    }
+    nav.active {
+        max-height: 600px;
+        padding: 20px 0;
+    }
+    nav a {
+        display: block;
+        margin: 12px 0;
+        font-size: 20px;
+        padding: 10px;
+    }
+    .menu-toggle {
+        display: flex;
+    }
+}
 
-        nav a {
-            color: black;
-            font-size: 21px;
-            text-decoration: none;
-            margin: 0 12px;
-            font-weight: bold;
-            padding: 5px 10px;
-            border-radius: 20px;
-        }
+/*  HOME  */
+.home{
+    min-height:100vh;
+    padding:100px 90px;
+    display:flex;
+    font-size: 40px;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
 
-        nav a:hover {
-            background: transparent;
-            box-shadow: 0px 2px 10px blue;
-            border: 3px solid black;
-            transition: 0.3s;
-        }
+.home-content{
+    display:flex;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+    text-align:center;
+}
 
-        .menu-toggle {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
+.profile img{
+    width:380px;
+    height:380px;
+    border-radius:50%;
+    border:4px solid black;
+    object-fit:cover;
+}
 
-        .menu-toggle div {
-            width: 28px;
-            height: 5px;
-            background: black;
-            margin: 5px 0;
-            transition: 0.4s;
-        }
+.home-text h1{
+    font-size:2.2rem;
+    color: blue;
+}
 
-        .menu-toggle.open div:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-        .menu-toggle.open div:nth-child(2) {
-            opacity: 0;
-        }
-        .menu-toggle.open div:nth-child(3) {
-            transform: rotate(-45deg) translate(6px, -6px);
-        }
+.hello{
+    font-size: 20px;
+    color: grey;
 
-        @media (max-width: 768px) {
-            nav {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                width: 100%;
-                background-color: palevioletred;
-                flex-direction: column;
-                align-items: center;
-                max-height: 0;
-                overflow: scroll;
-                transition: max-height 0.4s ease-in-out;
-            }
+}
 
-            nav.active {
-                max-height: 300px;
-            }
+.btn{
+    margin-top:15px;
+    padding:12px 35px;
+    font-size:18px;
+    border-radius:8px;
+    background:white;
+    border:2px solid black;
+    cursor:pointer;
+    transition:0.3s;
+}
 
-            nav a {
-                display: block;
-                margin: 12px 0;
-                font-size: 20px;
-            }
+.btn:hover{
+    background:linear-gradient(to right, blue, red);
+    color:white;
+}
 
-            .menu-toggle {
-                display: flex;
-            }
-        }
+/* ABOUT  */
+.about{
+    min-height:100vh;
+    padding:100px 20px;
+    display:flex;
+    font-size: 30px;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+    flex-wrap:wrap;
+}
 
-        /* ===== HOME SECTION ===== */
-        .box {
-            background: linear-gradient(140deg, white, white);
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: black;
-            text-align: center;
-            padding: 20px;
-        }
+.about-img img{
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    border:4px solid black;
+    object-fit:cover;
+}
+.para1{
+    color: grey;
+}
 
-        .profile img {
-            height: 350px;
-            width: 350px;
-            border-radius: 50%;
-            border: 4px solid black;
-            box-shadow: 0px 4px 25px blue;
-            object-fit: cover;
-        }
+.para2{
+    color: gray;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.about-name{
+    color: blue;
+}
+.about-passion{
+    color: blue;
+}
 
-        .box h1 {
-            font-size: 2.3rem;
-            margin-top: 15px;
-        }
+.intro{
+    max-width:600px;
+}
 
-        .box p {
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
+.tech{
+    margin:15px 0;
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+}
+.java,.html{
+    height: 50px;
+    width: 50px;
+}
 
-        .btn {
-            padding: 12px 40px;
-            font-size: 25px;
-            border-radius: 10px;
-            background: white;
-            border: 2px solid black;
-            color: black;
-            cursor: pointer;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+.tech div{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:10px;
+    border:2px solid black;
+    border-radius:10px;
+}
+.tech div:hover{
+    background: black;
+    color: white;
+}
 
-        .btn:hover {
-            background: linear-gradient(to right, blue, red);
-            color: white;
-            box-shadow: 0px 0.5px 15px blue;
-            border-radius: 30px;
-            transform: scale(1.05);
-        }
+.tech img{
+    width:25px;
+}
 
-        /* ===== ABOUT SECTION ===== */
-        .box2 {
-            background: linear-gradient(40deg, white, white);
-            color: black;
-            font-size: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 100px 30px;
-            flex-wrap: wrap;
-            gap: 40px;
-        }
+/*  SKILLS */
+.skills{
+    text-align:center;
+    font-size: 25px;
+    min-height:100vh;
+    padding:100px 20px;
+}
 
-        .intro {
-            max-width: 600px;
-        }
+.cards{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
 
-        .intro h1 { 
-            font-size: 2.5rem;
-        }
+.card{
+    padding:20px;
+    border:2px solid black;
+    border-radius:10px;
+    background:white;
+    transition:0.3s;
+}
 
-        .tech {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
+.card:hover{
+    transform:translateY(-6px);
+    background:#f2f2c9;
+}
 
-        .tech div {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            background: rgba(255, 255, 255, 0.3);
-            border: 2px solid black;
-            border-radius: 10px;
-            padding: 8px 12px;
-            transition: 0.3s;
-        }
+/*  PASSION  */
+.passion{
+    text-align:center;
+    min-height:100vh;
+    padding:100px 20px;
+    font-size: 25px;
+}
+.passion-p{
+    font-weight: 100;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.innerbox{
+    margin-top:25px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
 
-        .tech div:hover {
-            background: linear-gradient(140deg, lightblue, red);
-        }
+.icons{
+    width:260px;
+    padding:15px;
+    border:2px solid black;
+    border-radius:10px;
+    transition:0.3s;
+}
 
-        .tech img {
-            width: 25px;
-            height: 25px;
-        }
+.icons:hover{
+    background:black;
+    color: white;
+}
 
-        /* ===== SKILLS SECTION ===== */
-        .box3 {
-            text-align: center;
-            padding: 80px 30px;
-            height: 100vh;
-            background: linear-gradient(130deg, white, white);
-            color: black;
-        }
+/* PROJECT*/
+.project{
+    min-height:100vh;
+    padding:100px 20px;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 25px;
+}
 
-        .title h2 {
-            font-size: 2.8rem;
-        }
+.dot{
+    font-size:22px;
+}
 
-        .bar {
-            background-color: blue;
-            height: 3px;
-            width: 30%;
-            border-radius: 10px;
-            margin: 10px auto;
-        }
+/* CONTACT  */
+.contact{
+    min-height:50vh;
+    padding:100px 20px;
+    background:#1d2b64;
+    color:white;
+    text-align:center;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-            font-size: 25px;
-        }
+.bar{
+    width:120px;
+    height:3px;
+    background:blue;
+    margin:10px auto;
+}
 
-        .card {
-            border: 2px solid black;
-            border-radius: 10px;
-            padding: 20px;
-            transition: 0.3s;
-            background-color: white;
-        }
+.bar6{
+    width:120px;
+    height:4px;
+    background:yellow;
+    margin:10px auto;
+}
 
-        .card:hover {
-            background-color: lemonchiffon;
-            transform: translateY(-8px);
-            box-shadow: 0px 4px 10px gray;
-        }
+/*  MOBILE MENU  */
+@media (max-width: 768px) {
+    nav {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: white;
+        flex-direction: column;
+        align-items: center;
 
-        .card h3 {
-            color: black;
-            font-size: 34px;
-            margin-bottom: 10px;
-        }
+        max-height: 0;
+        overflow-y: auto;
+        overflow-x: hidden;
 
-        /* ===== PASSION SECTION ===== */
-        .box4 {
-            background: linear-gradient(40deg, white, white);
-            color: black;
-            font-size: 20px;
-            height: 100vh;
-            padding: 100px 20px;
-            text-align: center;
-        }
+        transition: max-height 0.4s ease-in-out;
+        padding: 0;
+        z-index: 999;
+    }
 
-        .content h2 {
-            font-size: 2.5rem;
-        }
+    nav.active {
+        max-height: 100vh; 
+        padding: 20px 0;
+    }
 
-        .content p {
-            font-size: 1.5rem;
-            max-width: 700px;
-            margin: 20px auto;
-        }
-
-        .innerbox {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .icons {
-            background: linear-gradient(40deg, white, white);
-            border: 2px solid black;
-            border-radius: 10px;
-            padding: 15px;
-            width: 180px;
-            transition: 0.3s;
-        }
-
-        .icons:hover {
-            background: lightcoral;
-            color: black;
-            border: 3px solid black;
-            box-shadow: 0px 0.5px 10px black;
-            transform: scale(1.05);
-        }
-
-        span {
-            color: goldenrod;
-            font-weight: bold;
-        }
-
-        /* ===== PROJECT SECTION ===== */
-        .box5 {
-            background: white;
-            padding: 100px 20px;
-            height: 100vh;
-            color: black;
-            text-align: center;
-        }
-        #project{
-            font-size: 25px;
-        }
-
-        .dot{
-            font-size: 25px;
-            color: blue;
-            justify-self: center;
-        }
-
-        .A{
-            color: black;
-            text-decoration: none;
-        }
-
-        /* ===== CONTACT SECTION ===== */
-        .box6 {
-            background: #1d2b64;
-            padding: 80px 20px;
-            color: white;
-            text-align: center;
-        }
-
-        .bar6 {
-            background-color: yellow;
-            height: 5px;
-            width: 20%;
-            margin: 10px auto;
-            border-radius: 10px;
-        }
-
-        @media (max-width: 480px) {
-            header { height: 60px; padding: 0 15px; }
-            .logo { font-size: 20px; }
-            .box h1 { font-size: 1.5rem; }
-            .box p { font-size: 1rem; }
-            .btn { padding: 10px 25px; font-size: 16px; }
-            .profile img { width: 220px; height: 220px; }
-            .intro h1 { font-size: 1.6rem; }
-            .content p { font-size: 1rem; }
-        }
+    nav a {
+        display: block;
+        margin: 12px 0;
+        font-size: 20px;
+        padding: 10px;
+    }
+}
