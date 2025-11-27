@@ -281,7 +281,9 @@ nav a:hover {
     min-height:100vh;
     padding:100px 20px;
     text-align: center;
-    justify-content: space-around;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 25px;
 }
 
@@ -344,6 +346,7 @@ nav a:hover {
         padding: 10px;
     }
 }
+
 
 
 
