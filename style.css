@@ -286,7 +286,7 @@ nav a:hover {
 }
 
 .dot1{
-    style-style:none;
+    list-style:none;
 }
 
 /* CONTACT  */
@@ -344,4 +344,5 @@ nav a:hover {
         padding: 10px;
     }
 }
+
 
