@@ -293,7 +293,7 @@ nav a:hover {
 
 /* CONTACT  */
 .contact{
-    min-height:100vh;
+    min-height:50vh;
     padding:100px 20px;
     background:#1d2b64;
     color:white;
@@ -346,6 +346,7 @@ nav a:hover {
         padding: 10px;
     }
 }
+
 
 
 
